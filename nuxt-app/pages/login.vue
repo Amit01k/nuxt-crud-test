@@ -29,8 +29,11 @@ export default{
             let result=await axios.get(
                 `http://localhost:3000/users?email=${this.email}&password=${this.password}`
 
-            )
-            console.log(result)
+            );
+            if(result.status==200&& result.data.length>0){
+                this.$router.push({name:"index"})
+            }
+            //console.log(result)
 
             }
             // console.log(this.email,this.password)
