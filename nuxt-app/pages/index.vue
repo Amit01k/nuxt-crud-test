@@ -1,6 +1,6 @@
 <template>
 <div>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, accusamus! Dicta, dolor sint quo possimus unde obcaecati enim earum modi!</p>
+    <h2>hii amit this is your index page</h2>
 </div>
 
 

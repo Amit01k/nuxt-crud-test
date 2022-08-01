@@ -18,6 +18,7 @@
 <script>
 // import { sign } from 'crypto';
 import axios from "axios"
+import indexVue from "./index.vue"
 
 
 export default{
@@ -41,6 +42,10 @@ export default{
                 password:this.password
             })
             console.warn(result)
+            if(result.status==201){
+                console.log("ho gya")
+                this.$router.push({name:"index"})
+            }
 
             
 
