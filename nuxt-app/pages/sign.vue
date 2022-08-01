@@ -44,7 +44,7 @@ export default{
             console.warn(result)
             if(result.status==201){
                 console.log("ho gya")
-                this.$router.push({name:"index"})
+                this.$router.push({name:"bucket"})
             }
 
             

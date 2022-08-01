@@ -31,7 +31,10 @@ export default{
 
             );
             if(result.status==200&& result.data.length>0){
-                this.$router.push({name:"index"})
+                this.$router.push({name:"bucket"})
+            }
+            else{
+                alert("please enter correct email and password")
             }
             //console.log(result)
 
