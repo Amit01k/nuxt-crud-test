@@ -1,12 +1,12 @@
 <template>
 
 <div>
-    <h2>sign</h2>
+    <h2 >This is signUp page</h2>
     <div>
-        <p >name<input type="text" v-model="name"/></p>
-        <p>email<input type="email" v-model="email"/></p>
-        <p>password<input type="password" v-model="password"/></p>
-        <button @click="sign">sign</button>
+        <p >name<input class ="border border-gray-400 block px-4 py-1 w-1/4 rounded focus:outline-none focus:border-teal-500" type="text" v-model="name"/></p>
+        <p>email<input class ="border border-gray-400 block px-4 py-1 w-1/4 rounded focus:outline-none focus:border-teal-500" type="email" v-model="email"/></p>
+        <p>password<input class ="border border-gray-400 block px-4 py-1 w-1/4 rounded focus:outline-none focus:border-teal-500" type="password" v-model="password"/></p>
+        <button @click="sign" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full m-6">sign</button>
     </div>
 </div>
 
