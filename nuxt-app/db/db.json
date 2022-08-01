@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "name": "mamit",
+      "email": "a@gmail.com",
+      "password": "sdnkfgn",
+      "id": 1
+    },
+    {
+      "name": "@gmial.com",
+      "password": "aferger",
+      "id": 21
+    },
+    {
+      "name": "@gmial.com",
+      "password": "aferger",
+      "id": 22
+    },
+    {
+      "name": "@gmial.com",
+      "password": "aferger",
+      "id": 23
+    },
+    {
+      "name": "sdhfuguse",
+      "email": "sdfiser",
+      "password": "sdhivisdf",
+      "id": 24
+    },
+    {
+      "name": "sdhfuguse",
+      "email": "sdfiser",
+      "password": "sdhivisdf",
+      "id": 25
+    },
+    {
+      "name": "ankit",
+      "email": "ankit@gmail.com",
+      "password": "ankit",
+      "id": 26
+    },
+    {
+      "name": "ankit",
+      "email": "ankit@gmail.com",
+      "password": "ankit",
+      "id": 27
+    }
+  ]
+}
