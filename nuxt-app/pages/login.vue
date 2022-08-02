@@ -28,10 +28,14 @@ export default{
         async login(){
             let result=await axios.get(
                 `http://localhost:3000/users?email=${this.email}&password=${this.password}`
+            
 
             );
+            console.log(this.email)
+           let {email,password}=result
+           console.log(email)
             if(result.status==200&& result.data.length>0){
-                this.$router.push({name:"bucket"})
+                this.$router.push({name:"item"})
             }
             else{
                 alert("please enter correct email and password")
