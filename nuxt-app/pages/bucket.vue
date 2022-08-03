@@ -70,64 +70,74 @@
             <p>{{grapestore}}</p>
             <p>{{basket}}</p>
         </div>
+        <first/>
+        <!-- <button ><First >click me</First></button> -->
 </template>
     <script >
 import { remove } from '@vue/shared'
+import First1 from '~~/components/first.vue'
 
 
     export default{
-        data(){
+        head(){
             return{
-                apple:'',
-                orange:'',
-                grapes:'',
-                appleStore:[],
-                orangeStore:[],
-                grapestore:[],
-                basket:[]
+                title:"about this page",
+                meta:[
+                    {
+                        hid:"description",
+                        name:"description",
+                        content:"this is page of add fruits"
+                    }
+                ]
             }
-            console.log(appele.length)
+            
         },
-        methods:{
-            addApple(){
-                this.appleStore.push("Apple")
-                console.log("hii amti kaisa hai")
-                // if(this.apple==10){
-
-                // }
-                // console.log(this.apple.length())
-
-            },
-            removeApple(){
-                this.appleStore.pop()
-            },
-             addGrapes(){
-                this.grapestore.push("grapes")
-                console.log("hii amti kaisa hai")
-                // if(this.apple==10){
-
-                // }
-                // console.log(this.apple.length())
-
-            },
-            removeGrapes(){
-                this.grapestore.pop()
-            },
-             addOrange(){
-                this.orangeStore.push("orange")
-                console.log("hii amti kaisa hai")
-                // if(this.apple==10){
-
-                // }
-                // console.log(this.apple.length())
-
-            },
-            removeOrange(){
-                this.orangeStore.pop()
-            }
+    data() {
+        return {
+            apple: "",
+            orange: "",
+            grapes: "",
+            appleStore: [],
+            orangeStore: [],
+            grapestore: [],
+            basket: []
+        };
+        console.log(appele.length);
+    },
+    methods: {
+        addApple() {
+            this.appleStore.push("Apple");
+            console.log("hii amti kaisa hai");
+            // if(this.apple==10){
+            // }
+            // console.log(this.apple.length())
+        },
+        removeApple() {
+            this.appleStore.pop();
+        },
+        addGrapes() {
+            this.grapestore.push("grapes");
+            console.log("hii amti kaisa hai");
+            // if(this.apple==10){
+            // }
+            // console.log(this.apple.length())
+        },
+        removeGrapes() {
+            this.grapestore.pop();
+        },
+        addOrange() {
+            this.orangeStore.push("orange");
+            console.log("hii amti kaisa hai");
+            // if(this.apple==10){
+            // }
+            // console.log(this.apple.length())
+        },
+        removeOrange() {
+            this.orangeStore.pop();
         }
-
-    }
+    },
+    components: { First1 }
+}
     // const count = ref(0)
     // const one = ref(0)
     // const two = ref(0)
