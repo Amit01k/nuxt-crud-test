@@ -3,12 +3,15 @@
     {
       "name": "mamit",
       "email": "a@gmail.com",
-      "password": "sdnkfgn",
+      "password": "admin",
+      "permission":"all",
       "id": 1
     },
     {
       "name": "@gmial.com",
+      "email": "ab@gmail.com",
       "password": "aferger",
+      "permission":"none",
       "id": 21
     },
     {
@@ -91,7 +94,15 @@
       "name": "amit kumar",
       "email": "amit @gmail.com",
       "password": "asdguksdfgu",
+      
       "id": 35
+    },
+    {
+      "name": "Amit Kumar",
+      "email": "amitkumar14377876@gmail.com",
+      "password": "123456789",
+      "permission":"all",
+      "id": 36
     }
   ]
 }

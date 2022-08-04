@@ -20,23 +20,22 @@
                 <div class="basis-1/4 bg-red-400 rounded-md ">
                     <div class="text-center text-lg">{{ apple.name }}</div>
                     <div class="text-center text-lg">{{ apple.count }}</div>
-                    <div class="text-center"><button v-on:click="add"
-                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button v-on:click="remove"
+                    <div class="text-center"><button @click="per? add() : al()"
+                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button @click="per? remove() : al()"
                             class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
                 </div>
                 <div class="basis-1/4 bg-orange-500 h-80 rounded-md">
                     <div class="text-center text-lg">{{ orange.name }}</div>
                     <div class="text-center text-lg">{{ orange.count }}</div>
-                    <div class="text-center"><button v-on:click="add1"
+                    <div class="text-center"><button @click="per? add1() : al()"
                             class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button
-                            v-on:click="remove1" class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
+                            @click="per? remove1() : al()" class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
                 </div>
                 <div class="basis-1/4 bg-blue-200 rounded-md">
                     <div class="text-center text-lg">{{ grapes.name }}</div>
                     <div class="text-center text-lg">{{ grapes.count }}</div>
-                    <div class="text-center"><button v-on:click="add2"
-                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button
-                            v-on:click="remove2" class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
+                    <div class="text-center"><button @click="per? add2() : al()"
+                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button @click="per? remove2() : al()"  class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
                 </div>
             </div>
         </div>
@@ -46,9 +45,9 @@
             </div>
             <center>
 
-                <table class="w-64  items-center justify-center">
-                    <tr class="border-solid border-2 border-indigo-600 w-10" v-for="(basket, index) in basket.slice().reverse()"
-                        :key="index">
+                <table class="w-64  items-center justify-center text-center">
+                    <tr class="border-solid border-2 border-indigo-600 w-10"
+                        v-for="(basket, index) in basket.slice().reverse()" :key="index">
                         <td :class="classes[basket]">{{ basket }}</td>
                     </tr>
                 </table>
@@ -78,13 +77,27 @@ export default {
                 color: ""
             },
             basket: [],
-            classes:{
-                "Apple":"apple",
-                "Grapes":"grapes",
-                "Orange":"orange"
-            }
+            classes: {
+                "Apple": "apple",
+                "Grapes": "grapes",
+                "Orange": "orange"
+            },
+            per: false,
         }
+
+
     },
+    created() {
+        this.per = this.$route.params.per;
+        if (this.per === "all") {
+            this.per = true;
+        }
+        else {
+            this.per = false
+        }
+        console.warn(this.per)
+    },
+
     methods: {
         add() {
             if (this.apple.count > 0) {
@@ -144,17 +157,22 @@ export default {
                 alert("You have selected invalid item ")
             }
         },
+        al(){
+            alert("You dont have access")
+        }
     }
 }
 </script>
 <style>
-.apple{
+.apple {
     background-color: red;
 }
-.orange{
+
+.orange {
     background-color: orange;
 }
-.grapes{
+
+.grapes {
     background-color: greenyellow;
 }
 </style>
