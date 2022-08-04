@@ -20,22 +20,26 @@
                 <div class="basis-1/4 bg-red-400 rounded-md ">
                     <div class="text-center text-lg">{{ apple.name }}</div>
                     <div class="text-center text-lg">{{ apple.count }}</div>
-                    <div class="text-center"><button @click="per? add() : al()"
-                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button @click="per? remove() : al()"
+                    <div class="text-center"><button @click="per ? add() : al()"
+                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button
+                            @click="per ? remove() : al()"
                             class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
                 </div>
                 <div class="basis-1/4 bg-orange-500 h-80 rounded-md">
                     <div class="text-center text-lg">{{ orange.name }}</div>
                     <div class="text-center text-lg">{{ orange.count }}</div>
-                    <div class="text-center"><button @click="per? add1() : al()"
+                    <div class="text-center"><button @click="per ? add1() : al()"
                             class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button
-                            @click="per? remove1() : al()" class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
+                            @click="per ? remove1() : al()"
+                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
                 </div>
                 <div class="basis-1/4 bg-blue-200 rounded-md">
                     <div class="text-center text-lg">{{ grapes.name }}</div>
                     <div class="text-center text-lg">{{ grapes.count }}</div>
-                    <div class="text-center"><button @click="per? add2() : al()"
-                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button @click="per? remove2() : al()"  class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
+                    <div class="text-center"><button @click="per ? add2() : al()"
+                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">+</button><button
+                            @click="per ? remove2() : al()"
+                            class="m-3 bg-slate-50 rounded-full text-lg h-10 w-10">-</button></div>
                 </div>
             </div>
         </div>
@@ -157,7 +161,7 @@ export default {
                 alert("You have selected invalid item ")
             }
         },
-        al(){
+        al() {
             alert("You dont have access")
         }
     }

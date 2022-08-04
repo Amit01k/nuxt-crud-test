@@ -75,7 +75,7 @@
 </template>
     <script >
 import { remove } from '@vue/shared'
-import First1 from '~~/components/first.vue'
+                    import First1 from '~~/components/first.vue'
 
 
     export default{
